@@ -1,6 +1,6 @@
 #include <iostream>
 
-int groessterTeiler(int num1, int num2) {
+int gcd1(int num1, int num2) {
   while (num2 != 0) {
     int temp = num1 % num2;
     num1 = num2;
@@ -8,6 +8,8 @@ int groessterTeiler(int num1, int num2) {
   }
   return num1;
 }
+
+int gcd2(int a, int b) { return b == 0 ? a : gcd2(b, a % b); }
 
 int main(int argc, const char *argv[]) {
   int eingabeNum1{};
@@ -20,6 +22,8 @@ int main(int argc, const char *argv[]) {
     std::cin >> eingabeNum2;
   }
 
-  int gcd = groessterTeiler(eingabeNum1, eingabeNum2);
-  std::cout << gcd << std::endl;
+  int gcd1Ausgabe = gcd1(eingabeNum1, eingabeNum2);
+  int gcd2Ausgabe = gcd2(eingabeNum1, eingabeNum2);
+  std::cout << gcd1Ausgabe << std::endl;
+  std::cout << gcd2Ausgabe << std::endl;
 }
