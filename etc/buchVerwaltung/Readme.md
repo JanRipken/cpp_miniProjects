@@ -1,2 +1,6 @@
-# Books for Console lol
-Kennenlernen von vector sowie oop mit c++
+# Books for Console
+
+Es ist was es ist !
+Konsolenprogramm zum Erstellen, bearbeiten und Löschen von Buchobjekten
+Speichern und Einlesen von einer Liste mit Buchbjekten
+
